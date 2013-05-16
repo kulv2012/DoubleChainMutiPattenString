@@ -1,0 +1,321 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\SupperDCMM.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SupperDCMM.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 234, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "系统使用帮助"
+FONT 12, "Microsoft Sans Serif", 700, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,13,42,20,20
+    LTEXT           "版本：3.0 windows 版，其他版本请联系作者",IDC_STATIC,35,25,156,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) ：吴海文---- 趁着年轻",IDC_STATIC,35,49,179,8
+    DEFPUSHBUTTON   "确定",IDOK,162,69,50,14,WS_GROUP
+    LTEXT           "联系方式：hw_henry2008@126.com",IDC_STATIC,35,72,138,8
+    LTEXT           "单位：哈尔滨工业大学软件学院",IDC_STATIC,35,61,128,8
+    LTEXT           "基于优化的双链多模式匹配算法",IDC_STATIC,50,14,147,8
+    LTEXT           "已实现三层优化，有效避免不必要的比较",IDC_STATIC,35,38,150,8
+END
+
+IDD_SUPPERDCMM_DIALOG DIALOGEX 0, 0, 471, 298
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "基于多重优化的双链的多模式匹配算法演示程序"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "退出",IDCANCEL,397,280,67,14
+    GROUPBOX        "结果演示区",IDC_STATIC_SHOW,7,19,313,275
+    EDITTEXT        IDC_EDIT_MAINSTRING,7,4,255,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "输入主串",IDC_BUTTON_INPUT_MAINSTRING,263,4,50,14
+    EDITTEXT        IDC_EDIT_SUBSTRING,325,20,139,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "添加模式串",IDC_BUTTON_ADD_SUBSTRING,325,36,72,14
+    CONTROL         "",IDC_LIST_SUBSTRING,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_AUTOARRANGE | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,325,60,139,101,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "您输入的所有模式串如下：",IDC_STATIC,325,51,84,8
+    LTEXT           "匹配结果列表：",IDC_STATIC,325,180,65,8
+    CONTROL         "",IDC_LIST_RESULT,"SysListView32",LVS_REPORT | LVS_AUTOARRANGE | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,325,189,139,70,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    PUSHBUTTON      "删除模式串",IDC_BUTTON_DELETE_SUBSTRING,397,36,67,14
+    PUSHBUTTON      "系统初始化",IDC_BUTTON_INIT,372,4,61,14
+    PUSHBUTTON      "快速匹配",IDC_BUTTON_BEGIN,325,280,72,14
+    PUSHBUTTON      "显示优化双链树",IDC_BUTTON_SHOW_TREE,397,163,67,14
+    PUSHBUTTON      "逐步演示",IDC_BUTTON_STEP,397,263,64,14
+    PUSHBUTTON      "helping",IDC_BUTTON_HELPING,434,4,30,14
+    PUSHBUTTON      "匹配模式设置",IDC_BUTTON_SET_MODE,325,263,72,14
+    PUSHBUTTON      "显示原始双链树",IDC_BUTTON_SHOW_NEW_TREE,325,163,72,14
+    CONTROL         "显示圆圈",IDC_CHECK_CIRCLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,397,178,67,10
+    LTEXT           "系统保留字符：",IDC_STATIC_RESERVE,409,51,55,8
+    PUSHBUTTON      "从文件输入",IDC_BUTTON_FILE,319,4,50,14
+END
+
+IDD_DIALOG_HELP DIALOGEX 0, 0, 341, 223
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "使用帮助"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,143,202,50,14
+    GROUPBOX        "使用指南：（更多帮助请查阅用户文档）",IDC_STATIC,7,7,327,193
+    EDITTEXT        IDC_EDIT_STR,7,17,327,181,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL,WS_EX_STATICEDGE
+END
+
+IDD_DIALOG_MODE DIALOGEX 0, 0, 316, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "标准匹配模式",IDOK,53,115,74,15
+    PUSHBUTTON      "扩展匹配模式",IDCANCEL,184,115,72,15
+    LTEXT           "标准匹配模式：符合当前一般模式，不允许有相互包含的模式串。系统会高效的进行",IDC_STATIC,7,39,302,8
+    LTEXT           "检测。但仍然会给出一定的匹配结果。",IDC_STATIC,57,53,252,8
+    LTEXT           "扩展模式匹配：算法进一步优化，能给出所有匹配结果，兼容相互包含的字符串。",IDC_STATIC,7,69,302,8
+    LTEXT           "计算结果为所有匹配成功的方案。",IDC_STATIC,60,84,249,8
+    EDITTEXT        IDC_EDIT_CHAR,104,94,40,14,ES_AUTOHSCROLL
+    LTEXT           "系统保留字符：",IDC_STATIC,47,99,56,8
+    LTEXT           "（注意，系统保留字符不能出现在模式串中）",IDC_STATIC,145,98,164,8
+END
+
+IDD_DIALOG_EXIT DIALOGEX 0, 0, 240, 87
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "系统退出提示"
+FONT 12, "Microsoft Sans Serif", 700, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "取消",IDOK,159,70,50,14
+    PUSHBUTTON      "退出",IDCANCEL,50,70,50,14
+    LTEXT           "使用过程中有任何建议欢迎垂询:hw_henry2008@126.com",IDC_STATIC,7,50,226,8
+    LTEXT           "DOS版的纯算法请联系作者。",IDC_STATIC,7,61,226,8
+END
+
+IDD_DIALOG_MAINSTRING DIALOGEX 0, 0, 386, 266
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "主串显示对话框"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "关闭",IDOK,281,246,50,14
+    EDITTEXT        IDC_EDIT_STR,7,16,372,223,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    LTEXT           "您输入的主串为：",IDC_STATIC,7,7,166,8
+    LTEXT           "温馨提示：如果您看到的字符乱码，请将文件用UNICODE编码另存为一份",IDC_STATIC,7,244,256,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,0,1
+ PRODUCTVERSION 4,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "Comments", "吴海文"
+            VALUE "CompanyName", "哈尔滨工业大学软件学院"
+            VALUE "FileDescription", "基于优化的双链树多模式匹配算法"
+            VALUE "FileVersion", "4.0.0.1"
+            VALUE "InternalName", "SupperDCMM.exe"
+            VALUE "LegalCopyright", "吴海文 -- 趁着年轻"
+            VALUE "OriginalFilename", "SupperDCMM.exe"
+            VALUE "ProductName", "基于优化的双链树多模式匹配算法演示系统"
+            VALUE "ProductVersion", "4.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        VERTGUIDE, 35
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_SUPPERDCMM_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 464
+        VERTGUIDE, 325
+        VERTGUIDE, 397
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 294
+        HORZGUIDE, 163
+        HORZGUIDE, 263
+        HORZGUIDE, 280
+    END
+
+    IDD_DIALOG_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 334
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_DIALOG_MODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+        HORZGUIDE, 108
+        HORZGUIDE, 115
+    END
+
+    IDD_DIALOG_EXIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_DIALOG_MAINSTRING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 379
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_COMPANY      BITMAP                  "res\\company.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "系统帮助"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\SupperDCMM.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
